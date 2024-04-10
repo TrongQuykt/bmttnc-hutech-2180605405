@@ -40,17 +40,19 @@ class RailFenceCipher:
             start += length
         
         # Decipher the text based on the rail structure
-        plain_text = []
+        plain_text = [''] * len(cipher_text)  # Initialize an empty list to store the plain text
         rail_index = 0
         direction = 1
+        current_index = 0  # Index to track position in the plain text
 
         for _ in range(len(cipher_text)):
-            plain_text.append(rails[rail_index][0])
+            plain_text[current_index] = rails[rail_index][0]
             rails[rail_index] = rails[rail_index][1:]
             if rail_index == 0:
                 direction = 1
             elif rail_index == num_rails - 1:
                 direction = -1
             rail_index += direction
+            current_index += 1
         
-        return plain_text
+        return ''.join(plain_text)  # Join the list of characters into a single string

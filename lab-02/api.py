@@ -1,6 +1,6 @@
 from cipher.vigenere import VigenereCipher
 from cipher.caesar import CaesarCipher
-from cipher.railfence import RailFenceCipher
+from cipher.railfence.railfence_cipher import RailFenceCipher
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
