@@ -1,8 +1,8 @@
-from cipher.vigenere import VigenereCipher
-from cipher.caesar import CaesarCipher
+from cipher.vigenere.vigenere_cipher import VigenereCipher
+from cipher.caesar.caesar_cipher import CaesarCipher
 from cipher.railfence.railfence_cipher import RailFenceCipher
-from cipher.playfair import PlayFairCipher
-from cipher.transposition import TranspositionCipher
+from cipher.playfair.playfair_cipher import PlayFairCipher
+from cipher.transposition.transposition_cipher import TranspositionCipher
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
